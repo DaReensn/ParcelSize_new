@@ -5,9 +5,29 @@ import javax.ws.rs.core.Response;
 import org.junit.Test;
 import com.google.gson.Gson;
 import main.java.MessageResource;
-import main.java.Package;
+import main.java.Parcel;
 
 public class TestJUnit {
+	
+	
+	@Test
+    public void packageTest() {
+    	String expectedResult = "{ length: 25.0, width: 24.0, height: 7.3, size: S }";
+    	double len = 25;
+    	double wid = 24;
+    	double hei = 7.3;
+    	String size = "S";
+
+        Parcel parcel = new main.java.Parcel();
+        parcel.size = size;
+        parcel.length = len;
+        parcel.height = hei;
+        parcel.width = wid;
+
+        assertEquals( expectedResult, parcel.toString());
+	}
+	
+	/*
 	
 	@Test
     public void Test1() {
@@ -17,7 +37,7 @@ public class TestJUnit {
     	
     	Response res = mr.size(expectedResult);
     	String jsonRes = (String) res.getEntity();
-    	Package p = g.fromJson(jsonRes, Package.class);
+    	Parcel p = g.fromJson(jsonRes, Parcel.class);
     	
     	assertEquals("XS",p.size);
     	
@@ -31,7 +51,7 @@ public class TestJUnit {
     	
     	Response res = mr.size(expectedResult);
     	String jsonRes = (String) res.getEntity();
-    	Package p = g.fromJson(jsonRes, Package.class);
+    	Parcel p = g.fromJson(jsonRes, Parcel.class);
     	
     	assertEquals("S",p.size);
     	
@@ -45,7 +65,7 @@ public class TestJUnit {
     	
     	Response res = mr.size(expectedResult);
     	String jsonRes = (String) res.getEntity();
-    	Package p = g.fromJson(jsonRes, Package.class);
+    	Parcel p = g.fromJson(jsonRes, Parcel.class);
     	
     	assertEquals("M",p.size);
     	
@@ -59,7 +79,7 @@ public class TestJUnit {
     	
     	Response res = mr.size(expectedResult);
     	String jsonRes = (String) res.getEntity();
-    	Package p = g.fromJson(jsonRes, Package.class);
+    	Parcel p = g.fromJson(jsonRes, Parcel.class);
     	
     	assertEquals("L",p.size);
     	
@@ -73,10 +93,10 @@ public class TestJUnit {
     	
     	Response res = mr.size(expectedResult);
     	String jsonRes = (String) res.getEntity();
-    	Package p = g.fromJson(jsonRes, Package.class);
+    	Parcel p = g.fromJson(jsonRes, Parcel.class);
     	
     	assertEquals("XL",p.size);
     	
     }
-    
+    */
 }

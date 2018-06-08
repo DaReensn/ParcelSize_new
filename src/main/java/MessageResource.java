@@ -19,14 +19,14 @@ public class MessageResource
   @GET 
   public Response message()
   {
-	Package parcel = new Package();
+	Parcel parcel = new Parcel();
 	parcel.height = 1;
 	parcel.length = 2;
 	parcel.width = 3;
 	parcel.size = "S";
 	Gson gs = new Gson();
     //return parcel.toString();
-	return Response.ok(gs.toJson(parcel, Package.class)).header("Access-Control-Allow-Origin", "*")
+	return Response.ok(gs.toJson(parcel, Parcel.class)).header("Access-Control-Allow-Origin", "*")
 		      .header("Access-Control-Allow-Credentials", "true")
 		      .header("Access-Control-Allow-Headers",
 		         "origin, content-type, accept, authorization")
@@ -34,7 +34,7 @@ public class MessageResource
 		         "GET, POST, PUT, DELETE, OPTIONS, HEAD").build();
   }
   
-  public double getGurtSize(Package parcel) {
+  public double getGurtSize(Parcel parcel) {
 	  int fakt_len = 2;
 	  int fakt_hei = 2;
 	  int fakt_wid = 2;
@@ -57,7 +57,7 @@ public class MessageResource
   @POST
   public Response size(String json) {
 	  Gson gs = new Gson();
-	  Package parcel = gs.fromJson(json, Package.class);
+	  Parcel parcel = gs.fromJson(json, Parcel.class);
 	  
 	  
 	  double gurt = this.getGurtSize(parcel);
@@ -65,7 +65,7 @@ public class MessageResource
 	  parcel.size = con.getSize(gurt);
 	  
 	  //return gs.toJson(parcel, Package.class);
-	  return Response.ok(gs.toJson(parcel, Package.class)).header("Access-Control-Allow-Origin", "*")
+	  return Response.ok(gs.toJson(parcel, Parcel.class)).header("Access-Control-Allow-Origin", "*")
       .header("Access-Control-Allow-Credentials", "true")
       .header("Access-Control-Allow-Headers",
          "origin, content-type, accept, authorization")
