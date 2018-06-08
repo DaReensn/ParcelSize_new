@@ -58,8 +58,8 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   
-   config.vm.provision "file", source: "/home/tobias/git/ParcelSize", destination: "/home/ParcelSize"
-end
+#   config.vm.provision "file", source: "/home/tobias/git/ParcelSize", destination: "/home/ParcelSize"
+#end
   
 #   config.vm.provision "shell", inline: <<-SHELL
 #    sudo apt-get update
