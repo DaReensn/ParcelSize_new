@@ -61,8 +61,8 @@ Vagrant.configure(2) do |config|
    config.vm.provision "file", source: "/home/tobias/git/ParcelSize", destination: "/home/ParcelSize"
 end
   
-   config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update
-    sudo apt-get install 
-   SHELL
-end
+#   config.vm.provision "shell", inline: <<-SHELL
+#    sudo apt-get update
+#    sudo apt-get install 
+#   SHELL
+#end
