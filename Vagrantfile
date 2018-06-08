@@ -59,7 +59,7 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   
   #config.vm.provision "file", source: "/home/tobias/git/ParcelSize", destination: "/home/ParcelSize"
- config.vm.provision "file", source: "~/workspace/shell-script.sh", destination: "shell-script.sh"
+ config.vm.provision "file", source: "~/workspace/pipeline/shell-script.sh", destination: "shell-script.sh"
   
    config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
