@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/tobias/Downloads/asm-3.1.jar"/>
-	<classpathentry kind="lib" path="/home/tobias/Downloads/jersey-bundle-1.19.4.jar"/>
-	<classpathentry kind="lib" path="/home/tobias/Downloads/jsr311-api-1.1.1.jar"/>
-	<classpathentry kind="lib" path="/home/tobias/Downloads/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="/home/reen/Downloads/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/reen/Downloads/jersey-bundle-1.19.4.jar"/>
+	<classpathentry kind="lib" path="/home/reen/Downloads/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/reen/Downloads/gson-2.8.2.jar"/>
 	<classpathentry kind="lib" path="/usr/share/java/mysql.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
@@ -13,6 +13,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/tobias/Downloads/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="/home/reen/Downloads/junit-4.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
