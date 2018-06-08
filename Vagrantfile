@@ -26,7 +26,7 @@ Vagrant.configure(2) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "public_network", ip: "192.168.50.102", :type => 'dhcp', :name => 'wlp2s0', :adapter => 2
+  config.vm.network :hostonly, ip: "192.168.50.102", 
   
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -58,8 +58,8 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   
-#   config.vm.provision "file", source: "/home/tobias/git/ParcelSize", destination: "/home/ParcelSize"
-#
+   config.vm.provision "file", source: "/home/tobias/git/ParcelSize", destination: "/home/ParcelSize"
+
   
 #   config.vm.provision "shell", inline: <<-SHELL
 #    sudo apt-get update
