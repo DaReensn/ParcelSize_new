@@ -65,7 +65,7 @@ Vagrant.configure(2) do |config|
    config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install 
-    
+    cd /home
 wget 192.168.50.103/images/parcel-api
 wget 192.168.50.103/images/parcel-db
 wget 192.168.50.103/images/parcel-frontend
